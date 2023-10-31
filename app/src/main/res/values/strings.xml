@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">EvaluacionContinua02</string>
+
+    <string-array name="Departamentos">
+        <item>Seleccione</item>
+        <item>LIMA</item>
+        <item>AREQUIPA</item>
+        <item>TRUJILLO</item>
+        <item>PIURA</item>
+        <item>JUNIN</item>
+        <item>CAJAMARCA</item>
+        <item>CUZCO</item>
+    </string-array>
+</resources>
