@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -152,7 +153,9 @@
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
-                android:text="Nuevo" />
+                android:text="Nuevo"
+                android:textSize="16sp"
+                app:cornerRadius="12dp" />
 
             <Button
                 android:id="@+id/btnGuardarPlato"
@@ -161,7 +164,9 @@
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
-                android:text="Guardar" />
+                android:text="Guardar"
+                android:textSize="16sp"
+                app:cornerRadius="12dp" />
 
             <Button
                 android:id="@+id/btnListarPlatos"
@@ -170,7 +175,9 @@
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_weight="1"
-                android:text="Listar" />
+                android:text="Listar"
+                android:textSize="16sp"
+                app:cornerRadius="12dp" />
 
         </LinearLayout>
         <!-- Botones -->

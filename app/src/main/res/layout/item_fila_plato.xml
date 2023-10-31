@@ -12,9 +12,9 @@
         android:layout_height="150dp"
         android:layout_margin="4dp"
         android:layout_weight="1"
+        android:contentDescription="TODO"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/p1006"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/p1006" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,40 +28,44 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            tools:text="CAUSA"
             android:textColor="#9C27B0"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="CAUSA" />
 
         <TextView
             android:id="@+id/tvCodigoPlato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            tools:text="1006"
-            android:textSize="16sp" />
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="1006" />
 
         <TextView
             android:id="@+id/tvPrecioPlato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            tools:text="4 Soles"
-            android:textSize="16sp" />
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="4 Soles" />
 
         <TextView
             android:id="@+id/tvTipoPlato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            tools:text="Entrada"
-            android:textSize="16sp" />
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="Entrada" />
 
         <TextView
             android:id="@+id/tvDepartamentoPlato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
+            android:textColor="@color/white"
             android:textSize="16sp"
             tools:text="Lima" />
 

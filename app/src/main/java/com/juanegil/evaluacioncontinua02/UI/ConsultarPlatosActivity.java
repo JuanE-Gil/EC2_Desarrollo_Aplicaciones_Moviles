@@ -1,7 +1,6 @@
 package com.juanegil.evaluacioncontinua02.UI;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -25,7 +24,6 @@ public class ConsultarPlatosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityConsultarPlatosBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         initListener();
     }
 
@@ -44,11 +42,12 @@ public class ConsultarPlatosActivity extends AppCompatActivity {
             }
         });
 
+        //  Cambiar el valor del precio minimo
+        // al detectar un camb--io
         binding.rsPrecioPlato.addOnChangeListener(new RangeSlider.OnChangeListener() {
             @Override
             public void onValueChange(@NonNull RangeSlider slider, float value, boolean fromUser) {
                 precioMinimo = value;
-                Log.d("RangeSlider", "ValorMinino" + precioMinimo);
             }
         });
     }

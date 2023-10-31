@@ -37,7 +37,7 @@ public class PlatosAdapter extends ArrayAdapter<Platos> {
         LayoutInflater inflater = LayoutInflater.from(myContext);
         convertView = inflater.inflate(myLayout, null);
 
-        // Acceso a los items del ListView
+        // Acceso a los elementos del ListView
         TextView tvNombrePlato = convertView.findViewById(R.id.tvNombrePlato);
         TextView tvCodigoPlato = convertView.findViewById(R.id.tvCodigoPlato);
         TextView tvPrecioPlato = convertView.findViewById(R.id.tvPrecioPlato);
@@ -45,29 +45,30 @@ public class PlatosAdapter extends ArrayAdapter<Platos> {
         TextView tvDepartamentoPlato = convertView.findViewById(R.id.tvDepartamentoPlato);
         ImageView imgPlato = convertView.findViewById(R.id.imgPlato);
 
-        // Envio de los datos
+        // Obtener el objeto Platos en la posición actual
         Platos platos = myList.get(position);
-        tvNombrePlato.setText(platos.getNombre_plato());
-        tvCodigoPlato.setText("Codigo: " + platos.getCod_plato());
-        tvPrecioPlato.setText("Precio: " + platos.getPrecio_plato());
-        tvTipoPlato.setText("Tipo: " + platos.getTipo_plato());
-        tvDepartamentoPlato.setText("Departamento: " + platos.getDepartamento());
 
-        imgPlato.setImageResource(getImagenPorCodigo(platos.getCod_plato()));
-
+        if (platos != null) {
+            // Validación para evitar valores nulos
+            tvNombrePlato.setText(platos.getNombre_plato());
+            tvCodigoPlato.setText(String.format("Codigo: %d", platos.getCod_plato()));
+            tvPrecioPlato.setText(String.format("Precio: S/%.2f", platos.getPrecio_plato()));
+            tvTipoPlato.setText(String.format("Tipo: %s", platos.getTipo_plato()));
+            tvDepartamentoPlato.setText(String.format("Departamento: %s", platos.getDepartamento()));
+            imgPlato.setImageResource(getImagenPorCodigo(platos.getCod_plato()));
+        } else {
+            // En caso de un objeto Platos nulo, puedes mostrar un mensaje de error o una vista alternativa.
+            tvNombrePlato.setText("Datos no disponibles");
+        }
         return convertView;
     }
 
     private int getImagenPorCodigo(int codigo) {
         int imgCodigo = 0;
-
         String nombreImagen = "p" + codigo;
         String nombrePaquete = getContext().getPackageName();
-
         imgCodigo = getContext().getResources().getIdentifier(nombreImagen, "drawable", nombrePaquete);
-
         if (imgCodigo <= 0) imgCodigo = R.drawable.a0000;
-
         return imgCodigo;
     }
 }
