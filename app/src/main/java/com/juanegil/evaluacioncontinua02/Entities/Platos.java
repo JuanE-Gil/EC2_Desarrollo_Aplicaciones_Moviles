@@ -1,6 +1,6 @@
 package com.juanegil.evaluacioncontinua02.Entities;
 
-public class Platos {
+public final class Platos {
     private int cod_plato;
     private String nombre_plato;
     private double precio_plato;

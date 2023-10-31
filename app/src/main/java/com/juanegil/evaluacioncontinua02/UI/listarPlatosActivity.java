@@ -44,7 +44,7 @@ public class listarPlatosActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 PlatosDao dao = new PlatosDao();
-                int codigo = dao.listarAlumnos().get(position).getCod_plato();
+                int codigo = dao.listarPlatos().get(position).getCod_plato();
                 String mensaje = dao.eliminarPlato(codigo);
 
                 Snackbar.make(view, mensaje, LENGTH_LONG).setTextColor(Color.YELLOW).show();
@@ -66,7 +66,7 @@ public class listarPlatosActivity extends AppCompatActivity {
 
     private void mostrarListadoDePlatos() {
         PlatosDao dao = new PlatosDao();
-        PlatosAdapter adapter = new PlatosAdapter(getApplicationContext(), R.layout.item_fila_plato, dao.listarAlumnos());
+        PlatosAdapter adapter = new PlatosAdapter(getApplicationContext(), R.layout.item_fila_plato, dao.listarPlatos());
         binding.lvPlatosTipicos.setAdapter(adapter);
     }
 }

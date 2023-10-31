@@ -10,7 +10,7 @@ public class PlatosDao {
     private static List<Platos> list = new ArrayList<Platos>();
 
 
-    public List<Platos> listarAlumnos() {
+    public List<Platos> listarPlatos() {
         return list;
     }
 
@@ -55,4 +55,17 @@ public class PlatosDao {
         }
         return platos;
     }
+
+    public List<Platos> platosPorPrecio(String departamento, double precioMinimo, double precioMaximo) {
+        List<Platos> platos = new ArrayList<Platos>();
+        for (Platos plato : list) {
+            if (plato.getDepartamento().equals(departamento) &&
+                    plato.getPrecio_plato() >= precioMinimo &&
+                    plato.getPrecio_plato() <= precioMaximo) {
+                platos.add(plato);
+            }
+        }
+        return platos;
+    }
+
 }

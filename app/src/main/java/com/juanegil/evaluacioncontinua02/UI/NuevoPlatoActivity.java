@@ -126,8 +126,6 @@ public class NuevoPlatoActivity extends AppCompatActivity {
                 return radioButtonSeleccionado.getText().toString();
             }
         }
-
-        // Return a default value or handle the case where no RadioButton is selected
         return "Ningún RadioButton seleccionado";
     }
 

@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.juanegil.evaluacioncontinua02.UI.ConsultarPlatosActivity;
 import com.juanegil.evaluacioncontinua02.UI.NuevoPlatoActivity;
 import com.juanegil.evaluacioncontinua02.databinding.ActivityMainBinding;
 
@@ -26,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), NuevoPlatoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.btnConsultarPlatos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ConsultarPlatosActivity.class);
                 startActivity(intent);
             }
         });
